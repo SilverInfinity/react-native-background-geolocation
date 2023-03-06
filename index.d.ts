@@ -136,6 +136,16 @@ export interface ConfigureOptions {
   activitiesInterval?: number;
 
   /**
+   * The minimum time interval between location updates while stationary in minutes.
+   *
+   * Platform: Android
+   * Provider: DISTANCE_FILTER
+   *
+   * @default 15
+   */
+   stationaryUpdateInterval?: number;
+
+  /**
    * @deprecated Stop location updates, when the STILL activity is detected.
    */
   stopOnStillActivity?: boolean;

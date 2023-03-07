@@ -7,7 +7,8 @@
   "scripts": {
     "link": "@mauron85/react-native-background-geolocation/scripts/postlink.js",
     "unlink": "@mauron85/react-native-background-geolocation/scripts/postunlink.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "sed -n -e '/path/,/url/p' .gitmodules | sed 'N;s/\\n/\\$$$/' | while IFS= read -r line; do if [[ $line =~ (.*)\\$\\$\\$(.*) ]] ; then path=\"$(echo ${BASH_REMATCH[1]} | sed 's/.*= //')\"; url=\"$(echo ${BASH_REMATCH[2]} | sed 's/.*= //')\"; if [ -d $path ] ; then start=$PWD; cd $path; git pull; cd $PWD; else git clone $url $path; fi fi done"
   },
   "repository": {
     "type": "git",

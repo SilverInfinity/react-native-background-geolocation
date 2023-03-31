@@ -14,6 +14,7 @@ import com.facebook.react.bridge.WritableMap;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -129,6 +130,8 @@ public class MapUtil {
                 writableMap.putString((String) pair.getKey(), (String) value);
             } else if (value instanceof Map) {
                 writableMap.putMap((String) pair.getKey(), MapUtil.toWritableMap((Map<String, Object>) value));
+            } else if (value instanceof ArrayList) {
+                writableMap.putArray((String) pair.getKey(), ArrayUtil.toWritableArray(((ArrayList<Object>) value).toArray()));
             } else if (value.getClass() != null && value.getClass().isArray()) {
                 writableMap.putArray((String) pair.getKey(), ArrayUtil.toWritableArray((Object[]) value));
             }

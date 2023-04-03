@@ -1,3 +1,6 @@
 [submodule "android-common"]
 	path = android/common
 	url = https://github.com/SilverInfinity/background-geolocation-android.git
+[submodule "ios-common"]
+	path = ios/common
+	url = https://github.com/SilverInfinity/background-geolocation-ios.git

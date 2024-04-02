@@ -1,14 +1,15 @@
 
 buildscript {
     repositories {
+        google()
+        mavenCentral()
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:4.1.0'
     }
 }
 
@@ -23,7 +24,6 @@ allprojects {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        jcenter()
         // repo for react-native
         // https://mvnrepository.com/artifact/com.facebook.react/react-native?repo=springio-plugins-release
         maven {

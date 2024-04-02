@@ -5,3 +5,4 @@
 [submodule "ios-common"]
 	path = ios/common
 	url = https://github.com/SilverInfinity/background-geolocation-ios.git
+	branch = master

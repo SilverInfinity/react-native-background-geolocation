@@ -86,4 +86,5 @@ dependencies {
     projDependencies.each {
         add(it.configuration, it.dependency)
     }
+    implementation "androidx.annotation:annotation:1.8.0"
 }
